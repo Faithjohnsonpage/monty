@@ -13,11 +13,11 @@ void process_file(const char *path);
 
 int is_valid_instruction(const char *instruction)
 {
-	int i;
+	unsigned int i;
 	const char *opcode[] = {"push", "pall", "pint", "pop", "swap", "add", "nop"};
 
 	/* Loop through the array to check if the given instruction is valid */
-	for (int i = 0; i < sizeof(opcode) / sizeof(opcode[0]); i++)
+	for (i = 0; i < sizeof(opcode) / sizeof(opcode[0]); i++)
 	{
 		if (strcmp(instruction, opcode[i]) == 0)
 		{
