@@ -54,13 +54,13 @@ int main(int ac, char *av[])
 {
 	if (ac < 2 || is_not_file(av[1]))
 	{
-		printf("USAGE: monty file\n");
+		fprintf(stderr, "USAGE: monty file\n");
 		exit(EXIT_FAILURE);
 	}
 
 	if (cannot_open_file(av[1]))
 	{
-		printf("Error: Can't open file %s\n", av[1]);
+		fprintf(stderr, "Error: Can't open file %s\n", av[1]);
 		exit(EXIT_FAILURE);
 	}
 
