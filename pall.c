@@ -29,6 +29,6 @@ void pint(int line_number)
 	}
 	else
 	{
-		printf("%d", top->n);
+		printf("%d\n", top->n);
 	}
 }
