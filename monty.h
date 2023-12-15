@@ -49,6 +49,6 @@ int is_valid_instruction(const char *instruction);
 void process_file(const char *path);
 void display_stack(void);
 void push_to_stack(char *argument_to_push);
-
+void pint(int line_number);
 
 #endif /* MONTY_H */

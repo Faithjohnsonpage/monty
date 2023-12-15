@@ -99,10 +99,10 @@ void process_file(const char *path)
 		{
 			display_stack();
 		}
-		/*else if (strcmp(instruction.opcode, "pint") == 0)
+		else if (strcmp(instruction.opcode, "pint") == 0)
 		{
-			pint();
-		}*/
+			pint(line_num);
+		}
 
 	}
 

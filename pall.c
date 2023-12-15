@@ -14,3 +14,21 @@ void display_stack(void)
 		temp = temp->next;
 	}
 }
+
+/*
+ * pint -  prints the value at the top of the stack
+ * @line_number: the line where we have the opcode pint
+ */
+
+void pint(int line_number)
+{
+	if (top == NULL)
+	{
+		fprintf(stderr, "L%d: usage: push integer\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+	else
+	{
+		printf("%d", top->n);
+	}
+}
