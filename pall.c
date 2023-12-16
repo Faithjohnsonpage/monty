@@ -26,7 +26,7 @@ void pint(stack_t **top, int line_number)
 {
 	if (*top == NULL)
 	{
-		fprintf(stderr, "L%d: usage: push integer\n", line_number);
+		fprintf(stderr, "L%d: can't pint, stack empty\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 	else
