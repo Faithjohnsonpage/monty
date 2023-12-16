@@ -8,6 +8,7 @@
 #include <sys/stat.h>
 #include <unistd.h>
 #include <sys/types.h>
+#include <ctype.h>
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -40,15 +41,12 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-extern stack_t *top;
 
-
-int is_not_file(const char *path);
-int cannot_open_file(const char *path);
 int is_valid_instruction(const char *instruction);
-void process_file(const char *path);
-void display_stack(void);
-void push_to_stack(char *argument_to_push);
-void pint(int line_number);
+void process_file(const char *filename, stack_t **top);
+void display_stack(stack_t **top);
+void push_to_stack(stack_t **top, int line_number, char *argument);
+void pint(stack_t **top, int line_number);
+char *is_arg_integer(int line_number, char *argument);
 
 #endif /* MONTY_H */
