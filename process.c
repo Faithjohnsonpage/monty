@@ -75,7 +75,7 @@ void process_file(const char *filename, stack_t **top)
 			/* Check if the instruction is valid */
 			if (!is_valid_instruction(opcode))
 			{
-				fprintf(stderr, "Error: L%d: unknown instruction %s\n", line_num, opcode);
+				fprintf(stderr, "L%d: unknown instruction %s\n", line_num, opcode);
 				free(line);
 				fclose(file);
 				exit(EXIT_FAILURE);
