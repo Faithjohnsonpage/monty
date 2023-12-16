@@ -20,5 +20,7 @@ int main(int ac, char *av[])
 
 	process_file(av[1], &top);
 
+	free_stack(top);
+
 	return (0);
 }

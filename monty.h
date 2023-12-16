@@ -48,5 +48,6 @@ void display_stack(stack_t **top);
 void push_to_stack(stack_t **top, int line_number, char *argument);
 void pint(stack_t **top, int line_number);
 char *is_arg_integer(int line_number, char *argument);
+void free_stack(stack_t *top);
 
 #endif /* MONTY_H */
