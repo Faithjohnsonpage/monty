@@ -15,6 +15,7 @@ void sub(stack_t **top, int line_number)
 	if (*top == NULL || (*top)->next == NULL)
 	{
 		fprintf(stderr, "L%d: can't sub, stack too short\n", line_number);
+		exit(EXIT_FAILURE);
 	}
 
 	temp = *top;
