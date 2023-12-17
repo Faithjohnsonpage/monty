@@ -2,7 +2,7 @@
 
 /**
  * sub - subtracts the top element of the stack
- * 		 from the second top element of the stack.
+ * from the second top element of the stack.
  * @top: A pointer to the top of stack.
  * @line_number: The line number of the file treated.
  */

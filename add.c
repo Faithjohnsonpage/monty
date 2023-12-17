@@ -2,8 +2,8 @@
 
 /**
  * add - Implementing the opcode add that adds the top two elements of stack
- * @top - A pointer to the top of stack.
- * @line_number - the line number of the file considered.
+ * @top: - A pointer to the top of stack.
+ * @line_number: - the line number of the file considered.
  */
 
 void add(stack_t **top, int line_number)
@@ -23,4 +23,4 @@ void add(stack_t **top, int line_number)
 	current->n = sum;
 	*top = (*top)->next;
 	free(temp);
-}	
+}
