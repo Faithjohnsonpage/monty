@@ -14,7 +14,16 @@ void process_file(const char *filename, stack_t **top);
 int is_valid_instruction(const char *instruction)
 {
 	unsigned int i;
-	const char *opcode[] = {"push", "pall", "pint", "pop", "swap", "add", "nop"};
+	const char *opcode[] = {
+		"push",
+		"pall",
+		"pint",
+		"pop",
+		"swap",
+		"add",
+		"nop",
+		"sub"
+	};
 
 	/* Loop through the array to check if the given instruction is valid */
 	for (i = 0; i < sizeof(opcode) / sizeof(opcode[0]); i++)
@@ -112,6 +121,10 @@ void process_file(const char *filename, stack_t **top)
 		else if (strcmp(instruction.opcode, "nop") == 0)
 		{
 			continue;
+		}
+		else if (strcmp(instruction.opcode, "sub") == 0)
+		{
+			sub(top, line_num);
 		}
 
 	}

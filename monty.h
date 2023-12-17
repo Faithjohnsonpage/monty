@@ -52,5 +52,6 @@ void free_stack(stack_t *top);
 void pop(stack_t **top, int line_number);
 void swap(stack_t **top, int line_number);
 void add(stack_t **top, int line_number);
+void sub(stack_t **top, int line_number);
 
 #endif /* MONTY_H */
