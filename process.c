@@ -105,6 +105,10 @@ void process_file(const char *filename, stack_t **top)
 		{
 			swap(top, line_num);
 		}
+		else if (strcmp(instruction.opcode, "add") == 0)
+		{
+			add(top, line_num);
+		}
 
 	}
 
