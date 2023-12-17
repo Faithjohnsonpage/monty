@@ -101,6 +101,10 @@ void process_file(const char *filename, stack_t **top)
 		{
 			pop(top, line_num);
 		}
+		else if (strcmp(instruction.opcode, "swap") == 0)
+		{
+			swap(top, line_num);
+		}
 
 	}
 
