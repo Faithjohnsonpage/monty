@@ -14,10 +14,16 @@ void pstr(stack_t **top)
 		printf("\n");
 	}
 
-	while (temp != NULL && temp->n != 0)
+	while (temp != NULL)
 	{
+		if (temp->n == 0)
+		{
+			printf("\n");
+			break;
+		}
+
 		printf("%c", temp->n);
 		temp = temp->next;
 	}
-	printf("\n");
+
 }
