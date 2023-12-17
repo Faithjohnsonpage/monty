@@ -82,7 +82,6 @@ void process_file(const char *filename, stack_t **top)
 		opcode = strtok(line, " \t\n$");
 		if (opcode != NULL)
 		{
-
 			if (strcmp(opcode, "push") == 0)
 			{
 				argument = strtok(NULL, " \t$\n");
