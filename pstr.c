@@ -14,7 +14,7 @@ void pstr(stack_t **top)
 		printf("\n");
 	}
 
-	while (temp != NULL)
+	while (temp->next != NULL)
 	{
 		if (temp->n == 0)
 		{
