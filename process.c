@@ -97,6 +97,10 @@ void process_file(const char *filename, stack_t **top)
 		{
 			pint(top, line_num);
 		}
+		else if (strcmp(instruction.opcode, "pop") == 0)
+		{
+			pop(top, line_num);
+		}
 
 	}
 
