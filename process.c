@@ -109,6 +109,10 @@ void process_file(const char *filename, stack_t **top)
 		{
 			add(top, line_num);
 		}
+		else if (strcmp(instruction.opcode, "nop") == 0)
+		{
+			continue;
+		}
 
 	}
 
