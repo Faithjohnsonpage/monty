@@ -18,6 +18,11 @@ void pstr(stack_t **top)
 
 		while (temp != NULL && temp->n != 0)
 		{
+			if (temp->n < 0 || temp->n > 127)
+			{
+				break;
+			}
+
 			printf("%c", temp->n);
 			temp = temp->next;
 		}
