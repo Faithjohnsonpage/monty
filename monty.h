@@ -56,5 +56,6 @@ void sub(stack_t **top, int line_number);
 void divide_stack(stack_t **top, int line_number);
 void mul(stack_t **top, int line_number);
 void mod(stack_t **top, int line_number);
+void pchar(stack_t **top, int line_number);
 
 #endif /* MONTY_H */

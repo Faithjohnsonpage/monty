@@ -25,7 +25,8 @@ int is_valid_instruction(const char *instruction)
 		"sub",
 		"div",
 		"mul",
-		"mod"
+		"mod",
+		"pchar"
 	};
 
 	/* Loop through the array to check if the given instruction is valid */
@@ -143,6 +144,10 @@ void process_file(const char *filename, stack_t **top)
 		else if (strcmp(instruction.opcode, "mod") == 0)
 		{
 			mod(top, line_num);
+		}
+		else if (strcmp(instruction.opcode, "pchar") == 0)
+		{
+			pchar(top, line_num);
 		}
 
 	}
