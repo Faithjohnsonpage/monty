@@ -22,7 +22,10 @@ int is_valid_instruction(const char *instruction)
 		"swap",
 		"add",
 		"nop",
-		"sub"
+		"sub",
+		"div",
+		"mul",
+		"mod"
 	};
 
 	/* Loop through the array to check if the given instruction is valid */
@@ -125,6 +128,18 @@ void process_file(const char *filename, stack_t **top)
 		else if (strcmp(instruction.opcode, "sub") == 0)
 		{
 			sub(top, line_num);
+		}
+		else if (strcmp(instruction.opcode, "div") == 0)
+		{
+			divide_stack(top, line_num);
+		}
+		else if (strcmp(instruction.opcode, "mul") == 0)
+		{
+			mul(top, line_num);
+		}
+		else if (strcmp(instruction.opcode, "mod") == 0)
+		{
+			mod(top, line_num);
 		}
 
 	}
