@@ -147,7 +147,7 @@ void process_file(const char *filename, stack_t **top)
 		}
 		else if (strcmp(instruction.opcode, "pchar") == 0)
 		{
-			pchar(top, line_num);
+			pchar(top, line_num, file, line);
 		}
 
 	}
