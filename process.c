@@ -76,12 +76,10 @@ void process_file(const char *filename, stack_t **top)
 		if (strspn(line, " \t\n") == strlen(line))
 			continue;
 
-		if (line[0] == '#')
-			continue; /* Ignore comments */
-
 		opcode = strtok(line, " \t\n$");
 		if (opcode != NULL)
 		{
+
 			if (strcmp(opcode, "push") == 0)
 			{
 				argument = strtok(NULL, " \t$\n");
