@@ -4,6 +4,8 @@
  * pchar - Prints the character value at the top of the stack.
  * @top: A pointer to the top of the stack.
  * @line_number: The line number in the Monty bytecode file.
+ * @file: A pointer to the FILE structure representing the Monty file.
+ * @line: A pointer to the dynamically allocated buffer for reading lines.
  *
  * Description:
  * This function prints the character value at the top of the stack. It checks
