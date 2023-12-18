@@ -58,5 +58,6 @@ void mul(stack_t **top, int line_number);
 void mod(stack_t **top, int line_number);
 void pchar(stack_t **top, int line_number, FILE *file, char *line);
 void pstr(stack_t **top);
+void rotl(stack_t **top);
 
 #endif /* MONTY_H */
