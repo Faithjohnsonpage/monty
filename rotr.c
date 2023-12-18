@@ -7,21 +7,19 @@
 
 void rotr(stack_t **top)
 {
-	stack_t *first = NULL, *last = NULL;
+	stack_t *last = *top;
 
 	if (*top == NULL || (*top)->next == NULL)
 	{
 		return;
 	}
 
-	first = *top;
-	last = *top;
-
 	while (last->next != NULL)
 	{
 		last = last->next;
 	}
 
-	*top = last;
-	first->next = NULL;
+    last->next = *top;
+    *top = last->next;
+    last->next = NULL;
 }
