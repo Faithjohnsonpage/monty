@@ -28,7 +28,8 @@ int is_valid_instruction(const char *instruction)
 		"mod",
 		"pchar",
 		"pstr",
-		"rotl"
+		"rotl",
+		"rotr"
 	};
 
 	/* Loop through the array to check if the given instruction is valid */
@@ -158,6 +159,10 @@ void process_file(const char *filename, stack_t **top)
 		else if (strcmp(instruction.opcode, "rotl") == 0)
 		{
 			rotl(top);
+		}
+		else if (strcmp(instruction.opcode, "rotr") == 0)
+		{
+			rotr(top);
 		}
 
 	}
