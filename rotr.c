@@ -19,7 +19,7 @@ void rotr(stack_t **top)
 		last = last->next;
 	}
 
-    last->next = *top;
-    *top = last->next;
-    last->next = NULL;
+	last->next = *top;
+	*top = last->next;
+	last->next = NULL;
 }
